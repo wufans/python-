@@ -58,7 +58,7 @@ python爬虫教程与实战
 
 1. [CSDN博客][4]
 2. 
-
+<To be continue>
 
   [1]: https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html
   [2]: http://docs.python-requests.org/zh_CN/latest/user/quickstart.html
