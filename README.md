@@ -5,7 +5,9 @@ python爬虫教程与实战
  - python3.X（3.6）
  - [BeautifulSoup (bs4)][1]
  - [requests][2]
+
 上述依赖的安装教程和文档不再赘述，看↑的链接~
+
  ---
 ## <font color="red">二、基础教程</font>
 
