@@ -43,9 +43,13 @@ python爬虫教程与实战
 ## <font color="red">四、实战</font>
 
 ### 小说下载
+
 #### 目的
+**从[笔趣看][5]中用爬虫下载小说。**
 #### 分析
+
 #### 代码整合
+
 #### 结合
 
 ### 表格数据爬取
@@ -66,3 +70,4 @@ python爬虫教程与实战
   [2]: http://docs.python-requests.org/zh_CN/latest/user/quickstart.html
   [3]: https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/5162711?fr=aladdin&fromid=22046949&fromtitle=%E7%88%AC%E8%99%AB
   [4]: http://blog.csdn.net/c406495762
+  [5]: http://www.biqukan.com
