@@ -47,6 +47,37 @@ python爬虫教程与实战
 #### 目的
 **从[笔趣看][5]中用爬虫下载小说。**
 #### 分析
+第一步，从各个章节的目录中爬取出对应各个子章节的链接：
+```python
+import requests 
+from bs4 import BeautifulSoup as bs
+
+def get_urls(target):
+    headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36"}
+    content = requests.get(target,headers = headers)
+    html = bs(content.text)
+    div = html.find_all("div",class_="listmain")
+    #print(type(all_title)) #a result set
+    titles = bs(str(div[0]))
+    a = titles.find_all('a')
+    chapter_names = []
+    chapter_urls = []
+    for title in a:
+        #print(title.string,title.get("herf"))
+        chapter_name = title.string
+        chapter_url = target + title.get('href')
+        chapter_names.append(chapter_name)
+        chapter_urls.append(chapter_url)
+        print(chapter_name, chapter_url)
+    
+def get_content(chapter_name, chapter_url):
+    pass
+
+if __name__ == "__main__":
+    target = "http://www.biqukan.com/0_910/"
+    get_urls(target)
+    
+```
 
 #### 代码整合
 
