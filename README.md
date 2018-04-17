@@ -78,7 +78,11 @@ if __name__ == "__main__":
     get_urls(target)
     
 ```
-
+第二部，分析每个章节的HTML内容，并提取对应的正文：
+```python
+import requests
+from bs4 import BeautifulSoup as bs
+```
 #### 代码整合
 
 #### 结合
