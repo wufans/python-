@@ -7,8 +7,8 @@ Created on Sun Apr  1 00:36:50 2018
 import subprocess
 import json
 
-
-#r = subprocess.Popen('./test.sh > result.txt')
+#利用python的subprocess库执行shell脚本命令，因为直接运行python的request文件不能爬取数据
+r = subprocess.Popen('./test.sh > result.txt')
 def txt_to_list():
     result_file = "result.txt"
     result_list = []
@@ -24,7 +24,7 @@ def txt_to_list():
                 singal_data_list.append(each.strip("[[").strip("]]").strip('').replace('"',"").split(","))
             result_list.append(singal_data_list)
     return result_list
-
+#整理格式并输出
 def get_result(result_list):
     dic_of_target = ["PTA内盘","MEG内盘","半光切片","江浙涤短","涤纶FDY68D","涤纶DTY",
                      "氨纶40D","Cotlook","CCIndex","华东棉浆","粘短1.5D","粘长120D","CPL内盘","锦纶切片","锦纶FDY","锦纶DTY"]
