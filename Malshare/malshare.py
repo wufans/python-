@@ -40,6 +40,7 @@ def datespan(startDate, endDate, delta=timedelta(days=1)):
 
 def get_hashes():
     hashes = []
+    # you can set your start time and end time(you can get the limitaion  in http://www.malshare.com/daily/)
     for day in datespan(date(2018, 2, 1), date(2018, 3, 1)):
         url = 'http://www.malshare.com/daily/{0}/malshare_fileList.{0}.txt'.format(day.strftime('%Y-%m-%d'))
         try:
